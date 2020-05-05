@@ -38,7 +38,7 @@
 					<br>
 					
 					<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary"> 
-					<input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
+					<input type="hidden" id="hidDIDSave" name="hidDIDSave" value="">
 					
 				</form>
 				
@@ -51,7 +51,7 @@
 				
 				
 				<br>
-				<div id="driveDoctorGrid">
+				<div id="divDoctorGrid">
 				<%
 					Doctor doctorObj = new Doctor();
 				out.print(doctorObj.readDoctor());
@@ -63,6 +63,8 @@
 
 			</div>
 		</div>
+
+
 
 	</div>
 
