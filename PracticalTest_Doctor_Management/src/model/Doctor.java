@@ -73,7 +73,7 @@ public class Doctor {
 				return "Error while connecting to the database for reading.";
 			}
 
-			// Prepare the html table to be displayed
+			
 			//Patient name is a foreign key. Retrieve patient name from patient table
 			//DID is primary key in the Doctor tale, doctorID is forign key in the Patient table
 			output = "<table border='2'><tr><th>Doctor Name</th>" + "<th>Specialization</th><th>NIC</th>"
