@@ -1,4 +1,4 @@
-In the Doctor.java file,
+In the DB_Connection.java file,
 
 "jdbc:mysql://127.0.0.1:3308/paf", "root", ""
 
