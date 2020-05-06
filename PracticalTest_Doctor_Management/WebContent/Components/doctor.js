@@ -181,6 +181,27 @@ function validateDoctorForm() {
 		} 
 	
 	
+	
+	 // is numerical value  
+	var tmpMobile = $("#Mobile").val().trim();  
+	if (!$.isNumeric(tmpMobile))  
+	{   
+		return "Insert a numerical value for Doctor Mobile Number."; 
+		} 
+	 
+	//is 10 numbers
+	var tmpMobile = $("#Mobile").val().trim(); 
+	var tmpMobile = document.getElementById('Mobile');
+	var filter =/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+		
+	if(!filter.test(tmpMobile.value)){
+	alert("Please enter 10 digit number!");
+	tmpMobile.focus;
+	 return "Mobile number is not in the valid format!!!!";
+	}
+	
+	
+	
 	// Doctor Email ID------------------------  
 	if ($("#Email").val().trim() == "") 
 	{   
@@ -189,6 +210,22 @@ function validateDoctorForm() {
 	
 	
 	
+	
+	//email format validation
+	 var email = $('#Email').val().trim();
+	 var email = document.getElementById('Email');
+	    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+	    if (!filter.test(email.value)) {
+	    alert('Please provide a valid email address!!!  ' + 'Eg. Email@email.com' );
+	    email.focus;
+	    return "Email Address is incorrect!!!!";
+	 }
+	
+	    
+	    
+	    
+	    
 	// Doctor Fee------------------------  
 	if ($("#DoctorFee").val().trim() == "") 
 	{   
