@@ -43,12 +43,14 @@ public class Doctor {
 				preparedStmt.execute();
 				con.close();
 
-				 String newDoctor =readDoctor();
+				String newDoctor =readDoctor();
 				  output= "{\"status\":\"success\",\"data\": \"" + newDoctor + "\"}";
+				  
 				
 				
 			} catch (Exception e) {
-				output = "{\"status\":\"success\",\"data\": \"Error while inserting the Doctor Details.\"}";
+				  output = "{\"status\":\"success\",\"data\": \"Error while inserting the doctor.\"}";
+				  
 				System.err.println(e.getMessage());
 			}
 
@@ -60,6 +62,7 @@ public class Doctor {
 	
 	
 	
+		//Read Doctor
 	public String readDoctor() {
 		String output = "";
 
@@ -73,11 +76,10 @@ public class Doctor {
 			// Prepare the html table to be displayed
 			//Patient name is a foreign key. Retrieve patient name from patient table
 			//DID is primary key in the Doctor tale, doctorID is forign key in the Patient table
-			output = "<table border=\"1\"><tr><th>Doctor Name</th>" + "<th>Specialization</th><th>NIC</th>"
+			output = "<table border='2'><tr><th>Doctor Name</th>" + "<th>Specialization</th><th>NIC</th>"
 					+ "<th>Mobile</th>" + "<th>Email</th>" + "<th>Doctor Fee</th>"
 					+ "<th>Update</th>"
-					+ "<th>Delete</th><tr>"
-					;
+					+ "<th>Delete</th><tr>";
 
 			String query = "select * from Doctor ";
 			
