@@ -1,0 +1,11 @@
+In the Doctor.java file,
+
+"jdbc:mysql://127.0.0.1:3308/paf", "root", ""
+
+
+1.  Change 3308 port number as per your machine.
+
+2.  My database , table names are "paf" , "doctor".
+
+-Thank You-
+-IT18123814-
